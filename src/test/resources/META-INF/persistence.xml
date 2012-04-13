@@ -5,6 +5,11 @@
 	<persistence-unit name="persistenceUnit"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+		<class>com.iamedu.model.domain.Person</class>
+
 		<properties>
 			<property name="hibernate.ejb.naming_strategy"
 				value="org.hibernate.cfg.DefaultComponentSafeNamingStrategy" />

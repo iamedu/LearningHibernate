@@ -4,4 +4,6 @@ import java.io.Serializable;
 
 public interface DomainObject extends Serializable {
 
+	Long getId();
+	
 }

@@ -7,9 +7,10 @@
                             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
                             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<context:property-placeholder location="classpath*:META-INF/spring/*.properties" />
 
-	<context:component-scan base-package="com.justcloud.core" />
+	<context:annotation-config />
+	<context:property-placeholder location="classpath*:META-INF/spring/*.properties" />
+	<context:component-scan base-package="com.iamedu.model" />
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
@@ -34,6 +35,5 @@
 		p:entityManagerFactory-ref="entityManagerFactory" />
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
-
 
 </beans>
